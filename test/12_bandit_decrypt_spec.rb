@@ -54,7 +54,7 @@ describe "#{FUNCTION}" do
     end
 
     it 'returns correct value for a sentance' do
-        assert_equal "Jag FLYGER från Umeå JUST NU", send(FUNCTION.to_sym,"JOJagog O FOFLOLYGOGEROR O fofrorånon O Umomeå O JOJUSOSTOT O NONU")
+        assert_equal "Jag FLYGER från Umeå JUST NU", send(FUNCTION.to_sym,"JOJagog FOFLOLYGOGEROR fofrorånon Umomeå JOJUSOSTOT NONU")
     end
 
 end
