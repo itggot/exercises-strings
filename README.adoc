@@ -205,7 +205,7 @@ Samma som ovan fast tvärtom. Den tar en sträng i rövarspråket och gör om de
 
 |===
 
-=== Count Char
+=== Count
 
 ==== Beskrivning
 Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet i strängen som output.
