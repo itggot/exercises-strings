@@ -1,0 +1,22 @@
+task :default => :all
+
+task :all do
+	tests = Dir.glob('./test/*_spec.rb').sort_by do |a|
+		basename = File.basename(a)
+		splitted = basename.split("_")
+		splitted.first.to_i
+	end
+	tests.each do |test|
+  	break unless system("ruby #{test}")
+  end
+end
+
+task :test do 
+	file = Dir.glob("./test/*_#{ARGV[-1]}_spec.rb").first
+	if file
+		system("ruby #{file}")
+	else
+		puts "can not find file #{"./test/*_#{ARGV[-1]}_spec.rb"}"
+	end
+	exit
+end

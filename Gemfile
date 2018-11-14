@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+
+gem 'minitest'
+gem 'minitest-reporters'
+gem 'minitest-fail-fast'
+gem 'mocha'
+gem 'humanize'
