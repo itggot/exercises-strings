@@ -205,6 +205,21 @@ Samma som ovan fast tvärtom. Den tar en sträng i rövarspråket och gör om de
 
 |===
 
+=== Count Char
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet i strängen som output.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "omg omg omg"| "omg" | 3
+
+    | "Bananpaj och grillkorv"| "an" | 2
+
+|===
 
 === Contains
 
