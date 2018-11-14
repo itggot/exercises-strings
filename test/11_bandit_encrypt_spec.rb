@@ -69,9 +69,9 @@ describe "#{FUNCTION}" do
 
     it 'returns correct value for a sentance' do
         if BONUS_ENABLED
-            assert_equal "JOJagog O FOFLOLYGOGEROR O fofrorånon O Umomeå O JOJUSOSTOT O NONU", send(FUNCTION.to_sym,"Jag FLYGER från Umeå JUST NU")
+            assert_equal "JOJagog FOFLOLYGOGEROR fofrorånon Umomeå JOJUSOSTOT NONU", send(FUNCTION.to_sym,"Jag FLYGER från Umeå JUST NU")
         else
-            assert_equal "JoJagog o foflolygogeror o fofrorånon o Umomeå o jojusostot o nonu", send(FUNCTION.to_sym,"Jag flyger från Umeå just nu")
+            assert_equal "JoJagog foflolygogeror fofrorånon Umomeå jojusostot nonu", send(FUNCTION.to_sym,"Jag flyger från Umeå just nu")
         end
     end
 
