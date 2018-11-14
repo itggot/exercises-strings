@@ -5,7 +5,7 @@ Tar ett namn som input och ger `"Good night, {namnet}, Sweet Prince!"` som outpu
 ==== Testdata
 [width=75%]
 |===
- | **Input 1**| **Input 2**| **Output**  
+ | **Input 1**|  **Output**  
 
     | "Olof"| "Good night, Olof, Sweet Prince!"
 
