@@ -1,0 +1,275 @@
+== Strängar
+=== Goodnight
+==== Beskrivning
+Tar ett namn som input och ger `"Good night, {namnet}, Sweet Prince!"` som output. Om namnet är `"David"` eller `"Daniel"` ska den istället ge `"Lazy bastard!"` som output.
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "Olof"| "Good night, Olof, Sweet Prince!"
+
+    | "Herman"| "Good night, Herman, Sweet Prince!"
+
+    | "David"| "Lazy bastard!"
+
+    | "Daniel"| "Lazy bastard!"
+
+|===
+=== Starts With
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och avgör om strängen börjar på det tecknet
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "h" | true
+
+    | "Hello World"| "k" | false
+
+    | "!!zomg!!"| "!" | true
+
+|===
+
+=== Ends With
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och avgör om strängen slutar på det tecknet
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "p" | true
+
+    | "Hello World"| "W" | false
+
+    | "!!zomg!!"| "!" | true
+
+|===
+
+=== Count Char
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och ger antalet förekomster av tecknet i strängen som output.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "omg omg omg"| "g" | 3
+
+    | "Bananpaj och grillkorv"| "a" | 3
+
+    | ".../o(. .  )"| "." | 5
+
+|===
+
+
+=== Contains Char
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och avgör om tecknet finns i strängen.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "h" | true
+
+    | "Hello World"| "%" | false
+
+    | "Hello World"| "H" | true
+
+|===
+
+=== Index of Char
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och ger tecknets position i strängen som output om det finns, annars nil.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "h" | 0
+
+    | "Hello World!"| "!" | 11
+
+    | "Hello World"| "!" | nil
+
+|===
+
+=== Delete Char
+
+==== Beskrivning
+Tar en sträng och ett tecken som input och ger en ny sträng som output, där tecknet är borttaget.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "omg omg omg"| "g" | "om om om"
+
+    | "I am a teapot"| "a" | "I m  tepot"
+
+|===
+
+=== Replace Char
+
+==== Beskrivning
+Tar tre strängar som input och en ny sträng som output där alla förekomster av sträng2 i sträng1 är ersatt med sträng3
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Input 3**| **Output**  
+
+    | "Hello World!"| "H"| "F" | "Fello World!"
+
+    | "Foobar"| "F"| "B" | "Boobar"
+
+|===
+
+=== Slice
+
+==== Beskrivning
+Tar en sträng och två integers som input och ger en ny sträng som output, där alla tecken i strängen mellan talen är urklippta.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Input 3**| **Output**  
+
+    | "Hello World"| 2| 8 | "llo Wo"
+
+    | "Foobar"| 0| 1 | "F"
+
+|===
+
+=== Reverse
+
+==== Beskrivning
+Tar en sträng som input och ger en den strängen fast baklänges som output.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Output**  
+
+    | "Hello World"| "dlroW olleH"
+
+    | "Foobar"| "rabooF"
+
+|===
+
+=== Bandit Encrypt
+
+==== Beskrivning
+Tar en sträng som input och gör om den till rövarspråket som output. 
+
+Regeln för rövarspråket är att man efter varje konsonant lägger ett o (kort å-ljud) och därefter samma konsonant igen, till exempel byts b ut mot "bob" och f mot "fof". Vokalerna är oförändrade. 
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Output**  
+
+    | "hello"| "hohelollolo"
+
+    | "Jag talar rövarspråket"| "jojagog totalolaror rorövovarorsospoproråkoketot"
+
+|===
+
+=== Bandit decrypt
+
+==== Beskrivning
+Samma som ovan fast tvärtom. Den tar en sträng i rövarspråket och gör om den till vanligt språk.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Output**  
+
+    | "hohelollolo" | "hello"
+
+    | "jojagog totalolaror rorövovarorsospoproråkoketot" | "Jag talar rövarspråket"
+
+|===
+
+
+=== Contains
+
+==== Beskrivning
+Tar en sträng och en annan substräng som input och avgör om subsaträngen finns i den första strängen.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "hej" | true
+
+    | "Hello World"| "#!=" | false
+
+    | "Hello World"| "World" | true
+
+|===
+
+=== Index
+
+==== Beskrivning
+Tar en sträng och en annan substräng som input och ger substrängens position i strängen som output om den finns, annars nil.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "hej hopp"| "hej" | 0
+
+    | "Hello World!"| "World" | 6
+
+    | "Hello World"| "grillkorv" | nil
+
+|===
+
+=== Delete
+
+==== Beskrivning
+Tar en sträng och en annan substräng som input och ger en ny sträng som output, där substrängen är borttagen.
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Output**  
+
+    | "omg omg omg"| "om" | "g g g"
+
+    | "I am a teapot"| " a " | "I am teapot"
+
+|===
+
+=== Replace
+
+==== Beskrivning
+Tar tre strängar som input och ger en ny sträng som output där alla förekomster av sträng2 i sträng1 är ersatt med sträng3
+
+==== Testdata
+[width=75%]
+|===
+ | **Input 1**| **Input 2**| **Input 3**| **Output**  
+
+    | "Hello World!"| "Hello"| "Zup" | "Zup World!"
+
+    | "aabbabab"| "bb"| "x" | "aaxxabab"
+
+|===
